@@ -1,0 +1,92 @@
+[gd_scene load_steps=9 format=3 uid="uid://8rf1u83e2re1"]
+
+[ext_resource type="Texture2D" uid="uid://cge2ojhnsroy7" path="res://addons/kenney_prototype_textures/dark/texture_08.png" id="1_ukl7g"]
+[ext_resource type="Script" path="res://name.gd" id="2_jp2ew"]
+[ext_resource type="Texture2D" uid="uid://4cgve42nefft" path="res://assets/Main Characters/Virtual Guy/Fall (32x32).png" id="2_rt2kp"]
+[ext_resource type="Script" path="res://Goose.gd" id="3_1v73x"]
+[ext_resource type="Texture2D" uid="uid://d3nh2a5qqj3e6" path="res://9f2efab846a3cec-removebg-preview.png" id="3_8y67f"]
+[ext_resource type="Script" path="res://Node.gd" id="6_7aikw"]
+
+[sub_resource type="SystemFont" id="SystemFont_o6aao"]
+font_names = PackedStringArray("HelveticaNeue")
+font_weight = 999
+
+[sub_resource type="SystemFont" id="SystemFont_qm1gi"]
+font_names = PackedStringArray("HelveticaNeue")
+font_weight = 999
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.216
+anchor_bottom = 0.188
+offset_right = 903.168
+offset_bottom = 526.176
+texture = ExtResource("1_ukl7g")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="Astronaut" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 316.0
+offset_top = 296.0
+offset_right = 427.0
+offset_bottom = 338.0
+theme_override_fonts/font = SubResource("SystemFont_o6aao")
+text = "Astronaut"
+
+[node name="Goose" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 672.0
+offset_top = 295.0
+offset_right = 765.0
+offset_bottom = 337.0
+theme_override_fonts/font = SubResource("SystemFont_qm1gi")
+text = "Goose"
+script = ExtResource("3_1v73x")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 410.0
+offset_right = 854.0
+offset_bottom = 474.0
+placeholder_text = "pick a name"
+alignment = 1
+script = ExtResource("2_jp2ew")
+
+[node name="confirm" type="Button" parent="LineEdit"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 374.0
+offset_top = 99.0
+offset_right = 585.0
+offset_bottom = 136.0
+text = "press enter to confirm"
+
+[node name="Fall(32x32)" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(367, 197)
+scale = Vector2(3.4375, 3.4375)
+texture = ExtResource("2_rt2kp")
+
+[node name="9f2Efab846a3Cec-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(722, 214)
+scale = Vector2(0.323913, 0.323913)
+texture = ExtResource("3_8y67f")
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("6_7aikw")
+
+[connection signal="pressed" from="Astronaut" to="Goose" method="_on_astronaut_pressed"]
+[connection signal="pressed" from="Goose" to="Goose" method="_on_pressed"]
