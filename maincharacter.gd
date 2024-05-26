@@ -65,3 +65,5 @@ func _physics_process(delta):
 func _on_animation_changed(new_animation):
 	# Verander de animatie van de AnimatedSprite2D
 	$AnimatedSprite2D.animation = str(new_animation)
+
+

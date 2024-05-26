@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Moonrunner"
-run/main_scene="res://main.tscn"
+run/main_scene="res://character_select.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://M.png"
+
+[autoload]
+
+Goose_change="*res://character_select.gd"
+Name="*res://name.gd"
 
 [editor]
 

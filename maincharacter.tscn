@@ -240,7 +240,6 @@ animations = [{
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-visible = false
 texture_filter = 1
 position = Vector2(-6, -1)
 scale = Vector2(2, 2)
@@ -253,6 +252,7 @@ position = Vector2(-5, 5)
 shape = SubResource("RectangleShape2D_obwm1")
 
 [node name="Sprite2D2" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
 position = Vector2(-5, 11)
 scale = Vector2(-1.63185, 1.64815)

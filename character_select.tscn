@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cge2ojhnsroy7" path="res://addons/kenney_prototype_textures/dark/texture_08.png" id="1_ukl7g"]
 [ext_resource type="Script" path="res://name.gd" id="2_jp2ew"]
 [ext_resource type="Texture2D" uid="uid://4cgve42nefft" path="res://assets/Main Characters/Virtual Guy/Fall (32x32).png" id="2_rt2kp"]
-[ext_resource type="Script" path="res://Goose.gd" id="3_1v73x"]
+[ext_resource type="Script" path="res://character_select.gd" id="3_1v73x"]
 [ext_resource type="Texture2D" uid="uid://d3nh2a5qqj3e6" path="res://9f2efab846a3cec-removebg-preview.png" id="3_8y67f"]
 [ext_resource type="Script" path="res://Node.gd" id="6_7aikw"]
 
